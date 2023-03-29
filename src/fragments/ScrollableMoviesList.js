@@ -29,7 +29,7 @@ export default function ScrollableMoviesList ({searchValue = ""|| "Suggestions..
     if(loading){
         return(
             <>
-                <div className="h-auto w-full bg-white">
+                <div className="fixed bottom-0 h-auto w-full bg-white">
                     <h2 className=" text-black text-left font-bold text-xl p-2">{searchValue}</h2>
                     <div className="overflow-x-auto flex">
                         <MovieCard/>
@@ -40,7 +40,7 @@ export default function ScrollableMoviesList ({searchValue = ""|| "Suggestions..
     }else{
         return(
             <>
-                <div className="h-auto w-full bg-white">
+                <div className="fixed bottom-0 h-auto w-full bg-white">
                     <h2 className=" text-black text-left font-bold text-xl p-2">{searchValue}</h2>
                     <div className="overflow-x-auto flex">
                         {discoverMovies.map((item, id)=>{

@@ -9,7 +9,7 @@ const SearchMovie = () => {
 
     return(
         <form onSubmit={(e)=>handleOnSubmit(e)}>
-            <input className="p-2 m-2 bg-white w-full rounded-md text-lg  text-black text-center shadow-xl" placeholder="Write something..." />
+            <input className="p-2  bg-white w-1/4 rounded-md md:text-lg text-sm  text-black text-center shadow-xl" placeholder="Write something..." />
         </form>
 
     )

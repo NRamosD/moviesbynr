@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './pages/home';
 import Search from './pages/search';
+import AppContext from './contexts/AppContext';
 
 function App() {
   const [movie, setMovie] = useState([])

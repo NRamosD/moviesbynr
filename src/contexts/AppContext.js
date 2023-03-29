@@ -1,13 +1,16 @@
-import { useContext } from "react"
+import { createContext, useContext, useState } from "react"
 
+const Context = createContext({})
 
-export default function Context(){
+export default function AppContext({children}){
 
-    const [searched, setSearched] = useContext()
+    const [searched, setSearched] = useState([])
+    const [selectedSuggest, setSelectedSuggest ] = useContext([])
 
-    return(
-        <></>
-    )
+    return  <Context.Provider value={{selectedSuggest, setSelectedSuggest}}>
+                {children}
+            </Context.Provider>
+        
 
 
 }
