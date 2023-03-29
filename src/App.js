@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './css/App.css';
+
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Home from './pages/home';
+import Search from './pages/search';
 
 function App() {
+  const [movie, setMovie] = useState([])
+  
+  
+  useEffect(()=>{
+
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Home/>}  path='/'>
+          <Route element={<Search/>} path='searching'/>
+        </Route>
+      </Routes>
+
+    </BrowserRouter>
+
+    
   );
 }
 
