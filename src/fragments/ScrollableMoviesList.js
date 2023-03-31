@@ -21,6 +21,8 @@ export default function ScrollableMoviesList ({searchValue = ""|| "Suggestions..
         dataReceptor()
         
     },[])
+
+    
     // {discoverMovies.map((item)=>{
     //     return(
     //         <MovieCard/>
@@ -29,7 +31,7 @@ export default function ScrollableMoviesList ({searchValue = ""|| "Suggestions..
     if(loading){
         return(
             <>
-                <div className="fixed bottom-0 h-auto w-full bg-white">
+                <div className="relative bottom-0 h-auto w-full bg-white">
                     <h2 className=" text-black text-left font-bold text-xl p-2">{searchValue}</h2>
                     <div className="overflow-x-auto flex">
                         <MovieCard/>
@@ -40,26 +42,13 @@ export default function ScrollableMoviesList ({searchValue = ""|| "Suggestions..
     }else{
         return(
             <>
-                <div className="fixed bottom-0 h-auto w-full bg-white">
-                    <h2 className=" text-black text-left font-bold text-xl p-2">{searchValue}</h2>
+                <div className="relative bottom-0 h-auto w-full bg-white">
+                    <h3 className=" text-black text-left font-bold text-lg px-2">{searchValue}</h3>
                     <div className="overflow-x-auto flex">
-                        {discoverMovies.map((item, id)=>{
-                            return <MovieCard key={id} back={item.backdrop_path} title={item.title} vote={item.vote_average} />
+                        {discoverMovies.map((item, index)=>{
+                            return <MovieCard key={index} id={item.id} overview={item.overview} back={item.backdrop_path} title={item.title} vote={item.vote_average} />
                         })}
-                        
-                        
-                        
-                        {/* <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/>
-                        <MovieCard/> */}
                     </div>
-                
                 </div>
     
             </>

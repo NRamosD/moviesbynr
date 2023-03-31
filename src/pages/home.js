@@ -9,18 +9,18 @@ export default function Home(){
     return(
         <>
             <div className="App">
-                <ShortDetail/>
-                <section className="App-section">
+                <div className="w-full h-[70vh]">
+                    <ShortDetail/>
                     <div className=" fixed p-2 top-0 right-0 w-full align-left text-left">
-                        <h2 className='text-3xl'>MOVIES APP</h2>
-                        <div>
-                            
-                        </div>
+                        <h2 className='text-3xl text-white'>MOVIES APP</h2>
                         <SearchMovie/>
-                        
                     </div>
+
+                </div>
+                <section className="w-full h-[30vh]">
                     
                     <ScrollableMoviesList/> 
+                    
                     
 
 
