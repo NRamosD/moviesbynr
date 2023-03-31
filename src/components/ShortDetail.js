@@ -11,7 +11,7 @@ const ShortDetail = () =>{
                 <img className="max-w-full max-h-full absolute right-0 gradiente" src={urlImg}/>
                 <div className=" w-1/3 h-40 m-3 p-3 absolute bottom-0 text-white text-left shadow-2xl rounded-xl">
                     <h1 className=" text-3xl">{title}</h1>
-                    <p className=" max-w-[50ch] break-words overflow-hidden text-ellipsis ">{desc}</p>
+                    <p className=" max-w-[50ch] break-words overflow-hidden text-ellipsis ">{desc.slice(0,170)+'...'}</p>
                 </div>
             </div>
             {/* <div className="w-full h-[65%] bg-red-400 absolute">
